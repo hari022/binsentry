@@ -8,7 +8,7 @@ import {DataserviceService} from '../dataservice.service';
 })
 export class EstimateconsumptionComponent implements OnInit {
   public binId:string // binId as string
-// DataService class inject in to constructor
+// DataService class injected in to constructor
   constructor(private data:DataserviceService) { }
 
   ngOnInit() {

@@ -11,7 +11,7 @@ export class RegisterbinComponent implements OnInit {
 
   public binId:string; // binId as string
   public binCapacity:number; // binCapacity as number
-  // DataService class inject in to constructor
+  // DataService class injected in to constructor
   constructor(private data:DataserviceService) { }
 
   ngOnInit() {

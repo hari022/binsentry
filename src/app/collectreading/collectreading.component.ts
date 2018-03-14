@@ -10,7 +10,7 @@ export class CollectreadingComponent implements OnInit {
   public binId:string; // binId as string
   public currentTonnage:number; // currentTonnage as number
   public time:number; // time as number
-// DataService class inject in to constructor
+// DataService class injected in to constructor
   constructor(private data:DataserviceService) { }
 
   ngOnInit() {

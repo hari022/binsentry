@@ -7,14 +7,14 @@ import {DataserviceService} from '../dataservice.service';
   styleUrls: ['./estimateconsumption.component.css']
 })
 export class EstimateconsumptionComponent implements OnInit {
-  public binId:string;
-
+  public binId:string // binId as string
+// DataService class inject in to constructor
   constructor(private data:DataserviceService) { }
 
   ngOnInit() {
   }
-
-  get(){
+  // Method to pass data to the service class
+  getBinId(){
     this.data.estimateTime(this.binId);
   }
 

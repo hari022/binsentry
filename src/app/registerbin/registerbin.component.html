@@ -1,6 +1,8 @@
-<h1 class="lead">Register Bin:</h1>
-<input class="form-control" type="text" placeholder="Enter bin ID" [(ngModel)] = "binId" ><br>
-<!--<p>{{binId}}</p>-->
-<input class="form-control" type="text" placeholder="enter bin capacity" [(ngModel)] = "binCapacity">
 
+<h1 class="lead">Register Bin:</h1>
+<!--Input box to collect BinID-->
+<input class="form-control" type="text" placeholder="Enter bin ID" [(ngModel)] = "binId" ><br>
+<!--Input box to collect bin capacity-->
+<input class="form-control" type="text" placeholder="enter bin capacity" [(ngModel)] = "binCapacity">
+<!--Button to pass data to service class-->
 <button class="btn btn-success" (click)="registerBin()"> Register</button>

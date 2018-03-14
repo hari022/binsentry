@@ -9,14 +9,14 @@ import {DataserviceService} from '../dataservice.service';
 })
 export class RegisterbinComponent implements OnInit {
 
-  public binId:string;
-  public binCapacity:number;
-
+  public binId:string; // binId as string
+  public binCapacity:number; // binCapacity as number
+  // DataService class inject in to constructor
   constructor(private data:DataserviceService) { }
 
   ngOnInit() {
   }
-
+  // Method to pass collected data to service class
   registerBin(){
     this.data.registerBin(this.binId, this.binCapacity);
   }

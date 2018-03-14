@@ -3,13 +3,13 @@ import { Injectable } from '@angular/core';
 @Injectable()
 export class DataserviceService {
 
-  public data:any [] = [];
-  public count:number = 0;
+  public data:any [] = [];  // Data array of objects to store data in programme memory
 
   constructor() { }
-
+  // Method to register bin
   registerBin(binId, binCapacity){
     console.log(binId, binCapacity);
+  //  Creating JavaScript Object to save the data to the data array
   this.data.push({
     id:binId,
     capacity:binCapacity,
@@ -48,11 +48,11 @@ export class DataserviceService {
     }
 
   }
-
+  // Method to save collected reading to the data array
   collectReading(binId, currentTonage, time){
+    // iterates through existing database and if bin is available then updates the JavaScript Object
     for(let i=0; i<this.data.length;i++){
       if(this.data[i].id == binId){
-
         if ('reading1' in this.data[i]){
           this.data[i] = {
             id:this.data[i].id,

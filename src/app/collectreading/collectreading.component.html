@@ -1,5 +1,9 @@
 <h1 class="lead">Collect Reading</h1>
+<!--Input box to collect Bin Id-->
 <input class="form-control" type="text" placeholder="enter bin ID" [(ngModel)] = "binId"><br>
+<!--Input box to collect current level-->
 <input class="form-control" type="text" placeholder="Enter current level" [(ngModel)] = "currentTonnage"><br>
+<!--input box to collect current time-->
 <input class="form-control" type="text" placeholder="Time" [(ngModel)] = "time">
+<!--Button to pass collected data to the service class-->
 <button class="btn btn-success" (click)="collectReading()">Collect</button>

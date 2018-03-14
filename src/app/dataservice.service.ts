@@ -5,16 +5,17 @@ export class DataserviceService {
 
   public data:any [] = [];  // Data array of objects to store data in programme memory
 
+
   constructor() { }
   // Method to register bin
   registerBin(binId, binCapacity){
-    console.log(binId, binCapacity);
+    // console.log(binId, binCapacity);
   //  Creating JavaScript Object to save the data to the data array
   this.data.push({
     id:binId,
     capacity:binCapacity,
   })
-    console.log(this.data);
+    console.log('Bin registered',this.data);
   }
 
   estimateTime(binId){
@@ -40,7 +41,8 @@ export class DataserviceService {
               ("0" + m.getMinutes()).slice(-2) + ":" +
               ("0" + m.getSeconds()).slice(-2);
 
-          console.log(dateString);
+
+          console.log('Bin will become empty at: ', dateString);
 
         }
         // console.log(this.data[i]);
@@ -78,10 +80,10 @@ export class DataserviceService {
         }
 
 
-        console.log(this.data);
+        console.log(' Readings collected',this.data);
       }
     }
-    console.log(binId, currentTonage, time);
+    // console.log(binId, currentTonage, time);
 
   }
 

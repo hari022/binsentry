@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import {DataserviceService} from '../dataservice.service';
+import {tick} from "@angular/core/testing";
 
 
 @Component({
@@ -11,6 +12,7 @@ export class RegisterbinComponent implements OnInit {
 
   public binId:string; // binId as string
   public binCapacity:number; // binCapacity as number
+
   // DataService class injected in to constructor
   constructor(private data:DataserviceService) { }
 
@@ -19,6 +21,7 @@ export class RegisterbinComponent implements OnInit {
   // Method to pass collected data to service class
   registerBin(){
     this.data.registerBin(this.binId, this.binCapacity);
+
   }
 
 }
